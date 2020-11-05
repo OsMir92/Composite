@@ -6,39 +6,39 @@ namespace Composite
     {
         static void Main(string[] args)
         {
-            Employee Rahul = new Employee { EmpID = 1, Name = "Rahul" };
-            Employee Amit = new Employee { EmpID = 2, Name = "Amit" };
-            Employee Mohan = new Employee { EmpID = 3, Name = "Mohan" };
+            Employee Raul = new Employee { EmployeeID = 1, EmployeeName = "Raul" };
+            Employee Ana = new Employee { EmployeeID = 2, EmployeeName = "Ana" };
+            Employee Thomas = new Employee { EmployeeID = 3, EmployeeName = "Thomas" };
 
-            Rahul.AddSubordinate(Amit);
-            Rahul.AddSubordinate(Mohan);
+            Raul.AddSubordinate(Ana);
+            Raul.AddSubordinate(Thomas);
 
-            Employee Rita = new Employee { EmpID = 4, Name = "Rita" };
-            Employee Hari = new Employee { EmpID = 5, Name = "Hari" };
+            Employee Rita = new Employee { EmployeeID = 4, EmployeeName = "Rita" };
+            Employee Helena = new Employee { EmployeeID = 5, EmployeeName = "Helena" };
 
-            Amit.AddSubordinate(Rita);
-            Amit.AddSubordinate(Hari);
+            Ana.AddSubordinate(Rita);
+            Ana.AddSubordinate(Helena);
 
-            Employee Kamal = new Employee { EmpID = 6, Name = "Kamal" };
-            Employee Raj = new Employee { EmpID = 7, Name = "Raj" };
+            Employee Kevin = new Employee { EmployeeID = 6, EmployeeName = "Kevin" };
+            Employee Rosario = new Employee { EmployeeID = 7, EmployeeName = "Rosario" };
 
-            Contractor Sam = new Contractor { EmpID = 8, Name = "Sam" };
-            Contractor tim = new Contractor { EmpID = 9, Name = "Tim" };
+            Contractor Samuel = new Contractor { EmployeeID = 8, EmployeeName = "Samuel" };
+            Contractor Jose = new Contractor { EmployeeID = 9, EmployeeName = "José" };
 
-            Mohan.AddSubordinate(Kamal);
-            Mohan.AddSubordinate(Raj);
-            Mohan.AddSubordinate(Sam);
-            Mohan.AddSubordinate(tim);
+            Thomas.AddSubordinate(Kevin);
+            Thomas.AddSubordinate(Rosario);
+            Thomas.AddSubordinate(Samuel);
+            Thomas.AddSubordinate(Jose);
 
-            Console.WriteLine("EmpID={0}, Name={1}", Rahul.EmpID, Rahul.Name);
+            Console.WriteLine("ID = {0}, Nombre = {1}", Raul.EmployeeID, Raul.EmployeeName);
 
-            foreach (Employee manager in Rahul)
+            foreach (Employee manager in Raul)
             {
-                Console.WriteLine("\n EmpID={0}, Name={1}", manager.EmpID, manager.Name);
+                Console.WriteLine("\n ID = {0}, Nombre = {1}", manager.EmployeeID, manager.EmployeeName);
 
                 foreach (var employee in manager)
                 {
-                    Console.WriteLine(" \t EmpID={0}, Name={1}", employee.EmpID, employee.Name);
+                    Console.WriteLine(" \t ID = {0}, Nombre = {1}", employee.EmployeeID, employee.EmployeeName);
                 }
             }
             Console.ReadKey();

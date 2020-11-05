@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Composite
-{
+﻿namespace Composite
+{   /*Clase abstracta que contiene miembros que serán implementados 
+    por todos los objetos de la jerarquía. 
+    Actúa como la clase base para todos los objetos de la jerarquía*/
     public interface IEmployed
-    {
-        int EmpID { get; set; }
-        string Name { get; set; }
+    {   
+        int EmployeeID { get; set; }
+        string EmployeeName { get; set; }
     }
 }

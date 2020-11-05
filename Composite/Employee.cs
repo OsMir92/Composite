@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Text;
-
+/*Clase que incluye los métodos de Agregar, Eliminar, Encontrar 
+ * y Obtener para hacer operaciones en componentes hijos(hojas).*/
 namespace Composite
 {
-    class Employee : IEmployed , IEnumerable<IEmployed>
+    internal class Employee : IEmployed , IEnumerable<IEmployed> //Se utiliza colecciones por iteración
     {
         private List<IEmployed> _subordinates = new List<IEmployed>();
 
-        public int EmpID { get; set; }
-        public string Name { get; set; }
+        public int EmployeeID { get; set; }
+        public string EmployeeName { get; set; }
 
         public void AddSubordinate(IEmployed subordinate)
         {

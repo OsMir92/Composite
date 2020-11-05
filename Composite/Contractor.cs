@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Composite
+﻿namespace Composite
 {
-    // Clase "Hoja"
+    // Clase "Hoja" implementando la interfaz
     public class Contractor : IEmployed
     {
-        public int EmpID { get; set; }
-        public string Name { get; set; }
+        public int EmployeeID { get; set; }
+        public string EmployeeName { get; set; }
     }
 }
